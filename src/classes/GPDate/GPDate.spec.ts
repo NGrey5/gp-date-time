@@ -19,7 +19,7 @@ describe("GPDate", () => {
   it("should set the date from a valid GP date string", () => {
     const gpDateString = "960515";
     const gpDate = new GPDate();
-    gpDate.setDateFromGPDateString(gpDateString);
+    gpDate.setFromGPDateString(gpDateString);
 
     const compareDate = new Date("05-15-1996");
     expect(gpDate["date"]).toEqual(compareDate);
@@ -28,7 +28,7 @@ describe("GPDate", () => {
   it("should throw an error from an invalid GP date string", () => {
     const gpDate = new GPDate();
     try {
-      gpDate.setDateFromGPDateString("05151996");
+      gpDate.setFromGPDateString("05151996");
       fail();
     } catch (err) {
       expect(err).toBeTruthy();

@@ -1,8 +1,5 @@
-import {
-  formatDateToString,
-  newDateFromGPDateString,
-  testValidGPDateString,
-} from "./functions";
+import { formatDateToString, newDateFromGPDateString } from "./functions";
+import { validateGPDateString } from "../../functions/validateGPDateString";
 import { GPDateStringFormat, GPDateStringOptions } from "./types";
 
 export class GPDate {
@@ -12,12 +9,13 @@ export class GPDate {
     if (date) this.date = date;
   }
 
-  public setDateFromGPDateString(dateString: string): void {
-    const isValid = testValidGPDateString(dateString);
+  public setFromGPDateString(dateString: string): GPDate {
+    const isValid = validateGPDateString(dateString);
     if (!isValid) {
       throw new Error("Not valid GP Date string");
     }
     this.date = newDateFromGPDateString(dateString);
+    return this;
   }
 
   public toString(options?: GPDateStringOptions) {

@@ -10,7 +10,7 @@
     "precompile-ts": "npx rimraf dist/**/*",
     "compile-ts": "npx tsc",
     "prepublish": "npm run compile-ts",
-    "publish": "npm publish --scope=public",
+    "publish": "npm publish --access public",
     "test": "jest --watch"
   },
   "repository": {

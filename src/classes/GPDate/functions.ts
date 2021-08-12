@@ -1,14 +1,4 @@
-import { GP_DATE_RX_PATTERN } from "./constants";
 import { GPDateStringFormat } from "./types";
-
-/**
- * Tests a date string and determines if it's in format YYMMDD
- */
-export function testValidGPDateString(dateString: string): boolean {
-  const rxPattern = GP_DATE_RX_PATTERN; // six numbers 001122
-  if (!rxPattern.test(dateString)) return false;
-  return true;
-}
 
 /**
  * Returns a new Date constructed from the GP date string provided
