@@ -1,6 +1,6 @@
 {
   "name": "@ngrey5/gp-date-time",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "GP Date and Time classes for parsing and formating GP dates.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
