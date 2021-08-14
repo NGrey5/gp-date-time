@@ -1,6 +1,6 @@
 {
   "name": "@ngrey5/gp-date-time",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "GP Date and Time classes for parsing and formating GP dates.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,8 +9,8 @@
     "start": "npm run compile-ts && node dist/index.js",
     "precompile-ts": "npx rimraf dist/**/*",
     "compile-ts": "npx tsc",
-    "prepublish": "npm run compile-ts",
-    "publish": "npm publish --access public",
+    "prerelease": "npm run compile-ts",
+    "release": "npm publish --access public",
     "test": "jest --watch"
   },
   "repository": {
