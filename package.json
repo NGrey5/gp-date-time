@@ -1,10 +1,10 @@
 {
   "name": "@ngrey5/gp-date-time",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "GP Date and Time classes for parsing and formating GP dates.",
   "main": "dist/lib/es5/index.js",
   "module": "dist/lib/es6/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "homepage": "github.com/ngrey5/gp-date-time",
   "scripts": {
     "start": "npm run compile-ts && node dist/index.js",
