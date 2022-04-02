@@ -8,7 +8,9 @@ export type GPDateStringFormat =
   | "MM/YY"
   | "MM-YY"
   | "MM/YYYY"
-  | "MM-YYYY";
+  | "MM-YYYY"
+  | "YYYY/MM/DD"
+  | "YYYY-MM-DD";
 
 export type GPDateStringOptions = {
   format?: GPDateStringFormat;

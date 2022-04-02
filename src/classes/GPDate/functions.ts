@@ -73,6 +73,12 @@ export function formatDateToString(
       parts = [formatTwoDigitString(month), year];
       str = parts.join("-");
       break;
+    case "YYYY/MM/DD":
+      parts = [year, formatTwoDigitString(month), formatTwoDigitString(day)];
+      return parts.join("/");
+    case "YYYY-MM-DD":
+      parts = [year, formatTwoDigitString(month), formatTwoDigitString(day)];
+      return parts.join("-");
   }
   return str;
 }
