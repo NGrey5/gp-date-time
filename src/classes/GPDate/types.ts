@@ -11,7 +11,3 @@ export type GPDateStringFormat =
   | "MM-YYYY"
   | "YYYY/MM/DD"
   | "YYYY-MM-DD";
-
-export type GPDateStringOptions = {
-  format?: GPDateStringFormat;
-};
