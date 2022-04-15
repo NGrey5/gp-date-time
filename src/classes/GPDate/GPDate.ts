@@ -38,8 +38,16 @@ export class GPDate {
    * @param date Standard `Date` object
    * @returns boolean
    */
-  public static isValidDate(date: Date): boolean {
-    return date instanceof Date && !isNaN(date.valueOf());
+  public static isValidDate(value: GPDateInput): boolean {
+    // If value is of type string, parse a date from it and check if it's a valid date string
+    if (typeof value === "string") {
+      return !isNaN(Date.parse(value));
+    }
+    // If value is a Date object, get the value of the date and return if it's a number or not
+    else if (value instanceof Date) {
+      return !isNaN(value.valueOf());
+    }
+    return false;
   }
 
   public static isValidYYMMDD = isValidYYMMDD;

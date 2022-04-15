@@ -55,4 +55,30 @@ describe("GPDate", () => {
 
     expect(gpDate.toDate()).toEqual(date);
   });
+
+  it("should validate a date value", () => {
+    const valid1 = "05-15-1996";
+    const valid1Result = GPDate.isValidDate(valid1);
+    expect(valid1Result).toBeTruthy();
+
+    const valid2 = new Date();
+    const valid2Result = GPDate.isValidDate(valid2);
+    expect(valid2Result).toBeTruthy();
+
+    const valid3 = new Date().toISOString();
+    const valid3Result = GPDate.isValidDate(valid3);
+    expect(valid3Result).toBeTruthy();
+
+    const valid4 = "010101";
+    const valid4Result = GPDate.isValidDate(valid4);
+    expect(valid4Result).toBeTruthy();
+
+    const invalid1 = "1/1/1/1/1";
+    const invalid1Result = GPDate.isValidDate(invalid1);
+    expect(invalid1Result).toBeFalsy();
+
+    const invalid2 = "abc";
+    const invalid2Result = GPDate.isValidDate(invalid2);
+    expect(invalid2Result).toBeFalsy();
+  });
 });
